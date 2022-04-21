@@ -1,6 +1,5 @@
-
 let elInp = document.querySelector("#inp");
-let elBtn = document.querySelector(".form_btn");
+let elBtn = document.querySelector(".form_btn");                                            
 let elClen = document.querySelector(".form_clear");
 let elImg = document.querySelector(".form_img");
 let elListt = document.querySelector(".list");
@@ -12,7 +11,6 @@ elBtn.addEventListener("click", function (evt) {
   let firstName = elInp.value.trim();
 
   if (firstName == "" || firstName.length < 3 || firstName.length > 15) {
-    
     elInp.style.borderColor = "red";
     elImg.style = "filter: invert(13%) sepia(90%) saturate(6913%) hue-rotate(0deg) brightness(100%) contrast(112%);";
     placeholder.style.Color = "red";
@@ -33,6 +31,7 @@ elBtn.addEventListener("click", function (evt) {
   newLi.append(newP1);
   elListt.append(newLi);
 
+  elInp.value = null;
 })  
 
 elClen.addEventListener("click", (evt) => {
