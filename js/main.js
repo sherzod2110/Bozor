@@ -4,6 +4,7 @@ let elBtn = document.querySelector(".form_btn");
 let elClen = document.querySelector(".form_clear");
 let elImg = document.querySelector(".form_img");
 let elListt = document.querySelector(".list");
+let arrowNan = [];
 
 elBtn.addEventListener("click", function (evt) {
   evt.preventDefault();
@@ -20,9 +21,15 @@ elBtn.addEventListener("click", function (evt) {
   elInp.style.borderColor = "#757575";
   elImg.style = "filter: invert(52%) sepia(4%) saturate(25%) hue-rotate(315deg) brightness(85%) contrast(74%);";
 
-  let newLi = document.createElement("li");
-  let newP1 = document.createElement("p");
-  newP1.textContent = `Product name: ${firstName}`; 
+  
+  arrowNan.push(firstName);
+
+  for (let firstName of arrowNan) {
+    newLi = document.createElement("li");
+    newP1 = document.createElement("p");
+    newP1.textContent = `Product name: ${firstName}`; 
+  }
+
   newLi.append(newP1);
   elListt.append(newLi);
 
