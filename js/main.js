@@ -7,8 +7,8 @@ let elListt = document.querySelector(".list");
 
 elBtn.addEventListener("click", function (evt) {
   evt.preventDefault();
-  let firstName = elInp.value.trim();
 
+  let firstName = elInp.value.trim();
 
   if (firstName == "" || firstName.length < 3 || firstName.length > 15) {
     
