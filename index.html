@@ -9,17 +9,22 @@
   <link rel="stylesheet" href="./style/main.css">
 </head>
 <body>
-
-  <img src="./img/1086916.png" alt="">
   
   <div class="container">
     <div class="box_wrapper">
       <form class="form" action="https://echo.htmlacademy.ru/" method="post">
         <input class="form_inp" type="text" id="inp" placeholder="Enter the product ..." autocomplete="off">
+
+        <div class="checkbox-wrapper">
+          <input type="checkbox" id="check" hidden/>
+          <label class="checkmark" for="check"></label>
+        </div>
+        
         <img class="form_img imgg" src="./img/1086916.png" alt="" width="30" height="30">
         <button class="form_btn" type="submit">Selection</button>
         <button class="form_clear" type="button">Cleaning</button>
       </form>
+      
     </div>
     <ol class="list"></ol>
   </div>

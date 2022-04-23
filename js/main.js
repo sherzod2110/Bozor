@@ -1,5 +1,7 @@
+let elForm = document.querySelector(".form");
 let elInp = document.querySelector("#inp");
-let elBtn = document.querySelector(".form_btn");                                            
+let check = document.querySelector("#check");
+let elBtn = document.querySelector(".form_btn");
 let elClen = document.querySelector(".form_clear");
 let elImg = document.querySelector(".form_img");
 let elListt = document.querySelector(".list");
@@ -18,7 +20,7 @@ elBtn.addEventListener("click", function (evt) {
   }
   elInp.style.borderColor = "#757575";
   elImg.style = "filter: invert(52%) sepia(4%) saturate(25%) hue-rotate(315deg) brightness(85%) contrast(74%);";
-
+  
   
   arrowNan.push(firstName);
 
@@ -28,8 +30,8 @@ elBtn.addEventListener("click", function (evt) {
     newP1.textContent = `Product name: ${firstName}`; 
   }
 
-  newLi.append(newP1);
-  elListt.append(newLi);
+  newLi.prepend(newP1);
+  elListt.prepend(newLi);
 
   elInp.value = null;
 })  

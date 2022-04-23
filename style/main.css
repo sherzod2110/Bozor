@@ -63,7 +63,8 @@ body {
 
 
 .form_btn {
-  padding: 11px 26px;
+  margin-left: 36px;
+  padding: 11px 9px;
   border-radius: 3px;
   background-color: blue;
   color: #fff;
@@ -151,3 +152,50 @@ body {
   filter: invert(52%) sepia(4%) saturate(25%) hue-rotate(315deg) brightness(85%) contrast(74%);
 }
 
+
+
+
+
+
+.checkbox-wrapper {
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 62px;
+  left: 264px;
+  cursor: pointer;
+}
+
+.checkmark {
+  display: block;
+  width: 37px;
+  height: 43px;
+  background-color: #ddd;
+  border-radius: 2px;
+  position: relative;
+  transition: background-color 0.4s;
+  cursor: pointer;
+}
+
+.checkmark::after {
+    content: "";
+    position: absolute;
+    width: 12px;
+    height: 20px;
+    border-right: 4px solid #fff;
+    border-bottom: 4px solid #fff;
+    top: 40%;
+    left: 50%;
+    opacity: 0;
+    transition: all 0.4s;
+}
+
+#check:checked ~ .checkmark {
+  background-color: rgba(186, 66, 112, 1);
+}
+
+#check:checked ~ .checkmark::after {
+  opacity: 1;
+  transform: translate(-59%, -50%) rotateZ(40deg) scale(1);
+}
